@@ -59,7 +59,8 @@ export function makeCenteredPopper(step) {
         phase: 'afterWrite',
         fn() {
           setTimeout(() => {
-            if (step.el) {
+            if (step.el && !step.el.hasAttribute('data-shepherd-focus-after-render', true)) {
+              step.el.setAttribute('data-shepherd-focus-after-render');
               step.el.focus();
             }
           }, 300);
