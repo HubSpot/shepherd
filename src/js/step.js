@@ -172,7 +172,9 @@ export class Step extends Evented {
    * Hide the step
    */
   hide() {
-    this.tour.modal.hide();
+    if (this.tour.modal) {
+      this.tour.modal.hide();
+    }
 
     this.trigger('before-hide');
 
