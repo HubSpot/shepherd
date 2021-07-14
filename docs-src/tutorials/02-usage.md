@@ -14,6 +14,7 @@ First create a new `Tour` instance for your tour:
 
 ```javascript
 const tour = new Shepherd.Tour({
+  useModalOverlay: true,
   defaultStepOptions: {
     classes: 'shadow-md bg-purple-dark',
     scrollTo: true
